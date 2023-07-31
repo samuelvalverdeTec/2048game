@@ -54,6 +54,8 @@ body {
 .pregame-container {
 
     display: flex;
+    justify-content: space-between;
+
 }
 
 #play-pause {
@@ -97,10 +99,10 @@ body {
     margin: 5px;
 }
 
-.radiobuttons {
+.radiobutton {
 
-    margin: 5px;
-    padding: 5%;
+    font-weight: bold;
+    text-align: center;
 }
 
 .tetris_num {
