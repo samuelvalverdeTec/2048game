@@ -1,9 +1,9 @@
 body {
 
-    background-color: rgb(230, 220, 200);
+    background: #faf8ef;
+    color: #776e65;
     font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
     align-content: center;
-
 }
 
 .container{
@@ -12,14 +12,12 @@ body {
     height: 625px;
     padding: 15%;
     margin: auto;
-
 }
 
 .heading {
 
     width: 500px;
     height: 120px;
-
 }
 
 .title {
@@ -30,7 +28,6 @@ body {
     width: 50%;
     font-size: 32px;
     float: left;
-
 }
 
 .scores-container {
@@ -38,7 +35,6 @@ body {
     width: 50%;
     margin: 20px;
     display: flex;
-
 }
 
 .scores-nums {
@@ -46,34 +42,34 @@ body {
     font-size: 15px;
     text-align: center;
     padding: 15px;
-
 }
 
 .score-c {
 
+    background-color: rgb(137, 119, 119);
+    color: white;
     width: 50%;
-
-}
-
-.best-c {
-
-    width: 50%;
-
 }
 
 .pregame-container {
 
     display: flex;
-
 }
 
-.play-pause {
+#play-pause {
 
     background-color: orange;
     color: black;
     margin: 20px;
     width: 50%;
+}
 
+#next-tile {
+
+    background-color: rgb(137, 119, 119);
+    color: white;
+    margin: 20px;
+    width: 50%;
 }
 
 .next-tile {
@@ -93,8 +89,6 @@ body {
 .button {
 
     border: 1px solid rgb(115, 104, 104);
-    background-color: rgb(137, 119, 119);
-    color: white;
     font-weight: bold;
     font-size: 10px;
     height: 60px;
@@ -107,7 +101,6 @@ body {
 
     margin: 5px;
     padding: 5%;
-
 }
 
 .tetris_num {
@@ -117,5 +110,4 @@ body {
     height: 20px;
     padding: 5px;
     margin: 2px;
-
 }
