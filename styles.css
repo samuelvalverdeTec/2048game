@@ -2,40 +2,84 @@ body {
 
     background-color: rgb(230, 220, 200);
     font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+    align-content: center;
 
 }
 
 .container{
 
-    width: 280px;
+    width: 500px;
     height: 625px;
     padding: 15%;
+    margin: auto;
 
 }
 
 .heading {
 
+    width: 500px;
+    height: 120px;
 
 }
 
 .title {
 
-    color: rgb(62, 62, 62);
+    color: rgb(86, 86, 86);
+    font-weight: bold;
+    margin: 0;
+    width: 50%;
+    font-size: 32px;
+    float: left;
 
 }
 
 .scores-container {
 
+    width: 50%;
+    margin: 20px;
+    display: flex;
+
+}
+
+.scores-nums {
+
+    font-size: 15px;
+    text-align: center;
+    padding: 15px;
 
 }
 
 .score-c {
 
+    width: 50%;
 
 }
 
 .best-c {
 
+    width: 50%;
+
+}
+
+.pregame-container {
+
+    display: flex;
+
+}
+
+.play-pause {
+
+    background-color: orange;
+    color: black;
+    margin: 20px;
+    width: 50%;
+
+}
+
+.next-tile {
+
+    margin: 20px;
+    width: 50%;
 
 }
 
@@ -52,8 +96,7 @@ body {
     background-color: rgb(137, 119, 119);
     color: white;
     font-weight: bold;
-    font-size: 12px;
-    width: 80px;
+    font-size: 10px;
     height: 60px;
     line-height: 0px;
     text-align: center;
