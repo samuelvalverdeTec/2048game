@@ -1,3 +1,17 @@
+class Ficha {
+
+    numero;
+    valores = [2,4];
+
+    constructor() {
+
+        const index = Math.random();    // 0 o 1
+        this.numero = valores[index];   // 2 o 4
+
+    }
+
+}
+
 class Game {
 
     size;   // 4x4
@@ -25,9 +39,5 @@ class Game {
         game.random();
 
     }
-
-    random
-
-    
 
 }

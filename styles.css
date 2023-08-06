@@ -55,7 +55,6 @@ body {
 
     display: flex;
     justify-content: space-between;
-
 }
 
 #play-pause {
@@ -78,7 +77,6 @@ body {
 
     margin: 20px;
     width: 50%;
-
 }
 
 .flex-container{
@@ -117,11 +115,9 @@ body {
 .tablero{
 
     background-color: whitesmoke;
-
     width: 200px;
     height: 300px;
     padding: 10%;
-    
     display: flex;
     flex-flow: column;
 }
@@ -130,7 +126,6 @@ body {
 
     display: flex;
     flex-flow: row;
-
 }
 
 .casilla{
@@ -144,5 +139,4 @@ body {
     height: 60px;
     text-align: center;
     margin: 0px;
-
 }
