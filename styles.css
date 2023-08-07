@@ -11,6 +11,7 @@ body {
     width: 500px;
     height: 625px;
     padding: 15%;
+    justify-content: center;
     margin: auto;
 }
 
@@ -115,28 +116,33 @@ body {
 .tablero{
 
     background-color: whitesmoke;
-    width: 200px;
-    height: 300px;
+    width: 360px;
+    height: 420px;
     padding: 10%;
-    display: flex;
+    border: black;
+    display: inline-flex;
     flex-flow: column;
+    margin: auto;
 }
 
 .container-casillas{
-
+    background-color: rgb(137, 119, 119);
+    width: 400px;
     display: flex;
     flex-flow: row;
+    justify-content: space-evenly;
+    margin: auto;
 }
 
 .casilla{
 
     border: 1px solid rgb(78 75 75);
-    background-color: rgb(137, 119, 119);
+    background-color: rgb(163, 150, 150);
     color: white;
     font-weight: bold;
     font-size: 12px;
-    width: 60px;
-    height: 60px;
+    width: 250px;
+    height: 80px;
     text-align: center;
-    margin: 0px;
+    margin: 5px;
 }
