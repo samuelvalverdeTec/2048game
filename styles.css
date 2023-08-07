@@ -114,9 +114,9 @@ body {
 
 .tablero{
 
-    background-color: whitesmoke;
-    width: 200px;
-    height: 300px;
+    background-color: rgb(118, 118, 118);
+    width: 327px;
+    height: 400px;
     padding: 10%;
     display: flex;
     flex-flow: column;
@@ -135,8 +135,20 @@ body {
     color: white;
     font-weight: bold;
     font-size: 12px;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    margin: 0px;
+}
+
+.casilla-Inicio{
+    border: 2px solid rgb(78 75 75);
+    background-color: rgb(235, 214, 214);
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    width: 80px;
+    height: 80px;
     text-align: center;
     margin: 0px;
 }
