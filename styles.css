@@ -139,6 +139,9 @@ body {
     height: 80px;
     text-align: center;
     margin: 5px;
+
+    /*position: absolute;
+    anim*/
 }
 
 #instructions {

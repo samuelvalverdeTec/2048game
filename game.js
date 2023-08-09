@@ -1,4 +1,4 @@
-/*class Ficha {
+class Ficha {
 
     numero;
     valores = [2,4];
@@ -10,19 +10,35 @@
 
     }
 
+    keylisten() {
+
+
+
+    }
+
 }
 
 class Game {
 
     size;   // 4x4
     board;
-    final;
+    gameOver;
+    score;
+    gameWon;
+    boton;
+    play_pause;
 
     constructor(){
 
         this.size = 4;
         this.board = Array(size).fill(Array(size).fill(0));
-        this.final = false;
+        this.gameOver = false;
+        this.score = 0;
+        this.gameWon = false;
+        this.play_pause = true;
+        this.boton = document.querySelector("#play-pause");
+        this.boton.onclick = check_pp();
+        const texto = this.boton.querySelector(#header_play-pause);
     }
 
     start() {
@@ -33,24 +49,10 @@ class Game {
     }
 
 }
-*/
-
-    const GRID_SIZE = 4;
-    var canvas;
-    var grid;
-    var gameOver;
-    var score;
-    var gameWon;
-
-    reactions();
 
 function keyPressed() {
     if (!gameOver && !gameWon) {
         switch (keyCode) {
-            case UP_ARROW:
-                verticalSlide(keyCode);
-                updateGrid();
-                break;
             case DOWN_ARROW:
                 verticalSlide(keyCode);
                 updateGrid();
@@ -65,20 +67,17 @@ function keyPressed() {
                 break;
         }
     }
-    else if (keyCode === ENTER) {
-        if (gameWon) {
-            location.reload();
-        }
-        else {
-            location.reload();
-        }
+}
+
+function check_pp() {
+
+    if(!game.play_pause){
+
+        const texto = document.querySelector(#header_play-pause);
+        texto.innerText = "PAUSE";
+
     }
-}
-
-function reactions() {
-
-    // agregar funcionalidad a botones y agregar key listeners
-
-    document.querySelector("#")
 
 }
+
+reactions();
