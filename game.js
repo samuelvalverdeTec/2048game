@@ -37,8 +37,8 @@ class Game {
         this.gameWon = false;
         this.play_pause = true;
         this.boton = document.querySelector("#play-pause");
-        this.boton.onclick = check_pp();
-        const texto = this.boton.querySelector(#header_play-pause);
+        this.boton.onclick = check_pp();    // event listener del click al boton
+        const texto = document.querySelector("#header_pp");
     }
 
     start() {
@@ -72,10 +72,9 @@ function keyPressed() {
 function check_pp() {
 
     if(!game.play_pause){
-
-        const texto = document.querySelector(#header_play-pause);
         texto.innerText = "PAUSE";
-
+    } else {
+        texto.innerText = "PLAY";
     }
 
 }
