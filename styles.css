@@ -10,7 +10,7 @@ body {
 
     width: 500px;
     height: 625px;
-    padding: 15%;
+    padding: 5%;
     justify-content: center;
     margin: auto;
 }
@@ -56,6 +56,7 @@ body {
 
     display: flex;
     justify-content: space-between;
+    margin-top: 25px;
 }
 
 #play-pause {
@@ -66,7 +67,7 @@ body {
     width: 50%;
 }
 
-#next-tile {
+#next-tile_button {
 
     background-color: rgb(137, 119, 119);
     color: white;
@@ -78,13 +79,6 @@ body {
 
     margin: 20px;
     width: 50%;
-}
-
-.flex-container{
-
-    margin: 30px;
-    padding: 20px;
-    display: flex;
 }
 
 .button {
@@ -145,4 +139,9 @@ body {
     height: 80px;
     text-align: center;
     margin: 5px;
+}
+
+#instructions {
+    position: relative;
+    float: left;
 }
