@@ -109,8 +109,8 @@ body {
 
 .tablero{
 
-    background-color: whitesmoke;
-    width: 360px;
+    background-color: rgb(190 179 179);
+    width: 400px;
     height: 420px;
     padding: 10%;
     border: black;
@@ -143,6 +143,8 @@ body {
     /*position: absolute;
     anim*/
 }
+
+
 
 #instructions {
     position: relative;
