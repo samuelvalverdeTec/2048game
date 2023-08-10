@@ -1,3 +1,7 @@
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+
 class Ficha {
 
     numero;
@@ -7,20 +11,14 @@ class Ficha {
 
     constructor() {
 
-        const index = Math.random();    // 0 o 1
-        this.numero = valores[index];   // 2 o 4
+
+
+        this.posX = getRandomInt(4) + 1;    // 0 o 1
+        //console.log("posX: " + this.posX);
         this.posY = 0;
-        posXtemp = [0,0];
-        const index2 = Math.random();
-        const index3 = Math.random();
-        posX1 = [1,2];
-        posX2 = [3,4];
-        posX1temp = posX1[index2];
-        posX2temp = posX2[index3];
-        posXtemp[0] = posX1temp;
-        posXtemp[1] = posX2temp;
-        const index4 = Math.random();
-        this.posX = posXtemp[index4];
+
+        this.numero = this.valores[getRandomInt(2)];
+        //console.log("numero ficha: " + this.numero);
 
 
     }
@@ -33,6 +31,50 @@ class Ficha {
 
 }
 
+
+function crearFicha(){
+    const fichaAct = new Ficha();
+    //console.log("numero en la ficha: " + fichaAct.numero);
+    //console.log("posicion ficha: " + fichaAct.posX);
+    
+    casilla = document.getElementById("F0C" + fichaAct.posX);
+    casilla.style.backgroundColor = 'red';
+    casilla.innerHTML = fichaAct.numero;
+    
+
+    return fichaAct;
+}
+
+function modifFicha(ficha){
+    casilla = document.getElementById("F" + ficha.posY + "C" + ficha.posX);
+    casilla.style.backgroundColor = 'red';
+    casilla.innerHTML = ficha.numero;
+    casilla = document.getElementById("F" + (ficha.posY -1) + "C" + ficha.posX);
+    casilla.style.backgroundColor = 'rgb(163, 150, 150)';
+    casilla.innerHTML = null;
+}
+
+function modifFichaPosY(ficha){
+    ficha.posY = ficha.posY + 1;
+}
+
+function modifFichaPosX(ficha){
+    //ficha.posX = ficha.posX + 1;
+}
+
+function check_pp() {
+
+    if(!game.play_pause){
+        texto.innerText = "PAUSE";
+    } else {
+        texto.innerText = "PLAY";
+    }
+
+}
+
+
+//crearFicha();
+
 class Game {
 
     size;   // 4x4
@@ -42,53 +84,72 @@ class Game {
     gameWon;
     boton;
     play_pause;
+    //botonPlay;
 
     constructor(){
 
         this.size = 4;
-        this.board = Array(size).fill(Array(size).fill(0));
+        this.board = Array(this.size).fill(Array(this.size).fill(0));
         this.gameOver = false;
         this.score = 0;
         this.gameWon = false;
         this.play_pause = true;
         this.boton = document.querySelector("#play-pause");
-        this.boton.onclick = check_pp();    // event listener del click al boton
-        const texto = document.querySelector("#header_pp");
+        //this.botonPlay = document.getElementById("play-pause");
+        //this.botonPlay.style.backgroundColor = 'white';
+        //this.boton.onclick = check_pp();    // event listener del click al boton
+        //const texto = document.querySelector("#header_pp");
     }
 
-    start() {
+    /*start() {
 
         const game = new Game();
         game.random();
 
         crearFicha();
 
-    }
+    }*/
 
 }
 
+function moveFicha(ficha){
+    modifFichaPosY(ficha);
+    modifFicha(ficha);
+}
 
-function crearFicha(){
-    fichaAct = new Ficha();
-    if(fichaAct.posX == 1){
-        casilla = document.getElementById(F0C1);
-        casilla.style.backgroundColor = 'red';
-    }
-    else if(fichaAct.posX == 2){
-        casilla = document.getElementById(F0C2);
-        casilla.style.backgroundColor = 'red';
-    }
-    else if(fichaAct.posX == 3){
-        casilla = document.getElementById(F0C3);
-        casilla.style.backgroundColor = 'red';
-    }
-    else {
-        casilla = document.getElementById(F0C4);
-        casilla.style.backgroundColor = 'red';
-    }
+function start() {
+
+    const game = new Game();
+
+    botonPlay = document.getElementById("play-pause");
+    //botonPlay.style.backgroundColor = 'white';
+
+    //game.random();
+    fichaAct = crearFicha();
+    //setTimeout(moveFicha(fichaAct), 5000);
+    //fichaAct = crearFicha();
+    /*while(fichaAct.posY != 4){
+        setTimeout(5000);
+        modifFichaPosY(fichaAct);
+        modifFicha(fichaAct);
+    }*/
+    //modifFichaPosY(fichaAct);
+    //modifFicha(fichaAct);
+    /*while(true){        
+        if(fichaAct.posY != 4){
+            modifFichaPosY(fichaAct);
+            modifFicha(fichaAct);
+        }
+        else{
+            fichaAct = crearFicha();
+        }
+        setTimeout(2000);
+    }*/
+    
 
 }
 
+start();
 
 function keyPressed() {
     if (!gameOver && !gameWon) {
@@ -109,14 +170,6 @@ function keyPressed() {
     }
 }
 
-function check_pp() {
 
-    if(!game.play_pause){
-        texto.innerText = "PAUSE";
-    } else {
-        texto.innerText = "PLAY";
-    }
 
-}
-
-reactions();
+//reactions();
