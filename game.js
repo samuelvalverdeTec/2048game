@@ -31,16 +31,56 @@ class Ficha {
 
 }
 
+//crearFicha();
+
+class Game {
+
+    size;   // 4x4
+    board;
+    gameOver;
+    score;
+    gameWon;
+    boton;
+    play_pause;
+    text_pp;
+    //botonPlay;
+
+    constructor(){
+
+        this.size = 4;
+        this.board = Array(this.size).fill(Array(this.size).fill(0));
+        this.gameOver = false;
+        this.score = 0;
+        this.gameWon = false;
+        this.play_pause = true;
+        this.boton = document.querySelector("#play-pause");
+        this.boton = addEventListener("click", check_pp());
+        this.text_pp = document.querySelector("#header_pp");
+        //this.botonPlay = document.getElementById("play-pause");
+        //this.botonPlay.style.backgroundColor = 'white';
+        //this.boton.onclick = check_pp();    // event listener del click al boton
+    }
+
+    /*start() {
+
+        const game = new Game();
+        game.random();
+
+        crearFicha();
+
+    }*/
+
+}
 
 function crearFicha(){
     const fichaAct = new Ficha();
     //console.log("numero en la ficha: " + fichaAct.numero);
     //console.log("posicion ficha: " + fichaAct.posX);
-    
+
     casilla = document.getElementById("F0C" + fichaAct.posX);
     casilla.style.backgroundColor = 'red';
     casilla.innerHTML = fichaAct.numero;
-    
+
 
     return fichaAct;
 }
@@ -72,46 +112,6 @@ function check_pp() {
 
 }
 
-
-//crearFicha();
-
-class Game {
-
-    size;   // 4x4
-    board;
-    gameOver;
-    score;
-    gameWon;
-    boton;
-    play_pause;
-    //botonPlay;
-
-    constructor(){
-
-        this.size = 4;
-        this.board = Array(this.size).fill(Array(this.size).fill(0));
-        this.gameOver = false;
-        this.score = 0;
-        this.gameWon = false;
-        this.play_pause = true;
-        this.boton = document.querySelector("#play-pause");
-        //this.botonPlay = document.getElementById("play-pause");
-        //this.botonPlay.style.backgroundColor = 'white';
-        //this.boton.onclick = check_pp();    // event listener del click al boton
-        //const texto = document.querySelector("#header_pp");
-    }
-
-    /*start() {
-
-        const game = new Game();
-        game.random();
-
-        crearFicha();
-
-    }*/
-
-}
-
 function moveFicha(ficha){
     modifFichaPosY(ficha);
     modifFicha(ficha);
@@ -120,8 +120,6 @@ function moveFicha(ficha){
 function start() {
 
     const game = new Game();
-
-    botonPlay = document.getElementById("play-pause");
     //botonPlay.style.backgroundColor = 'white';
 
     //game.random();
@@ -135,7 +133,7 @@ function start() {
     }*/
     //modifFichaPosY(fichaAct);
     //modifFicha(fichaAct);
-    /*while(true){        
+    /*while(true){
         if(fichaAct.posY != 4){
             modifFichaPosY(fichaAct);
             modifFicha(fichaAct);
@@ -145,11 +143,8 @@ function start() {
         }
         setTimeout(2000);
     }*/
-    
 
 }
-
-start();
 
 function keyPressed() {
     if (!gameOver && !gameWon) {
@@ -170,6 +165,6 @@ function keyPressed() {
     }
 }
 
+// main   
 
-
-//reactions();
+start();

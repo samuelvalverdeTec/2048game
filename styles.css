@@ -144,7 +144,49 @@ body {
     anim*/
 }
 
+.f2 {
+    background-color: rgb(213, 175, 126);
+}
 
+.f4 {
+    background-color:rgb(91, 131, 187);
+}
+
+.f8 {
+    background-color:rgb(136, 91, 187);
+}
+
+.f16 {
+    background-color:rgb(138, 182, 42);
+}
+
+.f32 {
+    background-color:rgb(182, 42, 131);
+}
+
+.f64 {
+    background-color:rgb(42, 154, 182);
+}
+
+.f128 {
+    background-color:rgb(188, 100, 5);
+}
+
+.f256 {
+    background-color:rgb(189, 95, 103);
+}
+
+.f512 {
+    background-color:rgb(182, 152, 42);
+}
+
+.f1024 {
+    background-color:rgb(42, 182, 147);
+}
+
+.f2048 {
+    background-color:rgb(182, 42, 42);
+}
 
 #instructions {
     position: relative;
