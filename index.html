@@ -13,11 +13,15 @@
             <div class="scores-container">
                 <div class="button score-c">
                     <h1>Score</h1>
-                    <h1 class="scores-nums">0</h1>
+                    <h1 id= "score" class="scores-nums">0</h1>
                 </div>
                 <div class="button score-c">
-                    <h1>Best</h1>
-                    <h1 class="scores-nums">0</h1>
+                    <h1>Moves</h1>
+                    <h1 id="movimientos" class="scores-nums">0</h1>
+                </div>
+                <div class="button score-c">
+                    <h1>Time</h1>
+                    <h1 id="tiempo" class="scores-nums">0</h1>
                 </div>
             </div>
             <div class="radiobutton">
@@ -30,7 +34,7 @@
             </div>
         </div>
         <section class="pregame-container">
-            <div class="button" id="play-pause">
+            <div class="button" id="play-pause" onclick="start_pause()">
                 <h1 id="header_pp">PLAY</h1>
             </div>
             <div class="button" id="next-tile_button">
@@ -40,34 +44,34 @@
         </section>
         <div class="tablero">
             <div id="F0" class="container-casillas">
+                <div id="F0C0" class="casilla"></div>
                 <div id="F0C1" class="casilla"></div>
                 <div id="F0C2" class="casilla"></div>
                 <div id="F0C3" class="casilla"></div>
-                <div id="F0C4" class="casilla"></div>
             </div>
             <div id="F1" class="container-casillas">
+                <div id="F1C0" class="casilla"></div>
                 <div id="F1C1" class="casilla"></div>
                 <div id="F1C2" class="casilla"></div>
                 <div id="F1C3" class="casilla"></div>
-                <div id="F1C4" class="casilla"></div>
             </div>
             <div id="F2" class="container-casillas">
+                <div id="F2C0" class="casilla"></div>
                 <div id="F2C1" class="casilla"></div>
                 <div id="F2C2" class="casilla"></div>
                 <div id="F2C3" class="casilla"></div>
-                <div id="F2C4" class="casilla"></div>
             </div>
             <div id="F3" class="container-casillas">
+                <div id="F3C0" class="casilla"></div>
                 <div id="F3C1" class="casilla"></div>
                 <div id="F3C2" class="casilla"></div>
                 <div id="F3C3" class="casilla"></div>
-                <div id="F3C4" class="casilla"></div>
             </div>
             <div id="F4" class="container-casillas">
+                <div id="F4C0" class="casilla"></div>
                 <div id="F4C1" class="casilla"></div>
                 <div id="F4C2" class="casilla"></div>
                 <div id="F4C3" class="casilla"></div>
-                <div id="F4C4" class="casilla"></div>
             </div>
 
         </div>
