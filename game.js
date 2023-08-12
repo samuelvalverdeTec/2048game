@@ -1,3 +1,7 @@
+//Erick Kauffmann Porcar
+//Samuel Valverde Arguedas
+//TC0
+
 var game = null;
 var fichaAct;
 var tiempo = 600;
